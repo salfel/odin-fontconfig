@@ -26,12 +26,12 @@ package fontconfig
 foreign import lib "libfontconfig.lib"
 _ :: lib
 
-@(default_calling_convention="c")
+@(default_calling_convention="c", link_prefix="Fc")
 foreign lib {
-	FcFreeTypeCharSetAndSpacing :: proc(face: i32, blanks: ^i32, spacing: ^i32) -> ^i32 ---
-	FcFreeTypeCharSet           :: proc(face: i32, blanks: ^i32) -> ^i32 ---
-	FcPatternGetFTFace          :: proc(p: ^i32, object: cstring, n: i32, f: ^i32) -> i32 ---
-	FcPatternAddFTFace          :: proc(p: ^i32, object: cstring, f: i32) -> i32 ---
-	FcFreeTypeQueryFace         :: proc(face: i32, file: ^i32, id: u32, blanks: ^i32) -> ^i32 ---
+	FreeTypeCharSetAndSpacing :: proc(face: i32, blanks: ^i32, spacing: ^i32) -> ^i32 ---
+	FreeTypeCharSet           :: proc(face: i32, blanks: ^i32) -> ^i32 ---
+	PatternGetFTFace          :: proc(p: ^i32, object: cstring, n: i32, f: ^i32) -> i32 ---
+	PatternAddFTFace          :: proc(p: ^i32, object: cstring, f: i32) -> i32 ---
+	FreeTypeQueryFace         :: proc(face: i32, file: ^i32, id: u32, blanks: ^i32) -> ^i32 ---
 }
 

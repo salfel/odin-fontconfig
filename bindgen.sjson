@@ -10,6 +10,12 @@ import_lib = "libfontconfig.lib"
 
 package_name = "fontconfig"
 
+remove_type_prefix = "Fc"
+
+remove_macro_prefix = "FC_"
+
+remove_function_prefix = "Fc"
+
 clang_include_paths = [
     "input/freetype",
     "input/freetype/freetype",

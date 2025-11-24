@@ -26,20 +26,20 @@ package fontconfig
 foreign import lib "libfontconfig.lib"
 _ :: lib
 
-Fc_Char8  :: u8
-Fc_Char16 :: u16
-Fc_Char32 :: u32
-Fc_Bool   :: i32
+Char8  :: u8
+Char16 :: u16
+Char32 :: u32
+Bool   :: i32
 
 /*
 * Current Fontconfig version number.  This same number
 * must appear in the fontconfig configure.in file. Yes,
 * it'a a pain to synchronize version numbers like this.
 */
-FC_MAJOR                :: 2
-FC_MINOR                :: 17
-FC_REVISION             :: 1
-FC_VERSION              :: ((FC_MAJOR*10000)+(FC_MINOR*100)+(FC_REVISION))
+MAJOR                :: 2
+MINOR                :: 17
+REVISION             :: 1
+VERSION              :: ((FC_MAJOR*10000)+(FC_MINOR*100)+(FC_REVISION))
 
 /*
 * Current font cache file format version
@@ -50,127 +50,127 @@ FC_VERSION              :: ((FC_MAJOR*10000)+(FC_MINOR*100)+(FC_REVISION))
 * changes in any non-compatible way.  Try to avoid such changes as
 * it means multiple copies of the font information.
 */
-FC_CACHE_VERSION_NUMBER :: 9
+CACHE_VERSION_NUMBER :: 9
 FcFalse                 :: 0
 FcTrue                  :: 1
 FcDontCare              :: 2
-FC_FAMILY               :: "family"         /* String */
-FC_STYLE                :: "style"          /* String */
-FC_SLANT                :: "slant"          /* Int */
-FC_WEIGHT               :: "weight"         /* Int */
-FC_SIZE                 :: "size"           /* Range (double) */
-FC_ASPECT               :: "aspect"         /* Double */
-FC_PIXEL_SIZE           :: "pixelsize"      /* Double */
-FC_SPACING              :: "spacing"        /* Int */
-FC_FOUNDRY              :: "foundry"        /* String */
-FC_ANTIALIAS            :: "antialias"      /* Bool (depends) */
-FC_HINTING              :: "hinting"        /* Bool (true) */
-FC_HINT_STYLE           :: "hintstyle"      /* Int */
-FC_VERTICAL_LAYOUT      :: "verticallayout" /* Bool (false) */
-FC_AUTOHINT             :: "autohint"       /* Bool (false) */
+FAMILY               :: "family"         /* String */
+STYLE                :: "style"          /* String */
+SLANT                :: "slant"          /* Int */
+WEIGHT               :: "weight"         /* Int */
+SIZE                 :: "size"           /* Range (double) */
+ASPECT               :: "aspect"         /* Double */
+PIXEL_SIZE           :: "pixelsize"      /* Double */
+SPACING              :: "spacing"        /* Int */
+FOUNDRY              :: "foundry"        /* String */
+ANTIALIAS            :: "antialias"      /* Bool (depends) */
+HINTING              :: "hinting"        /* Bool (true) */
+HINT_STYLE           :: "hintstyle"      /* Int */
+VERTICAL_LAYOUT      :: "verticallayout" /* Bool (false) */
+AUTOHINT             :: "autohint"       /* Bool (false) */
 
 /* FC_GLOBAL_ADVANCE is deprecated. this is simply ignored on freetype 2.4.5 or later */
-FC_GLOBAL_ADVANCE       :: "globaladvance"  /* Bool (true) */
-FC_WIDTH                :: "width"          /* Int */
-FC_FILE                 :: "file"           /* String */
-FC_INDEX                :: "index"          /* Int */
-FC_FT_FACE              :: "ftface"         /* FT_Face */
-FC_RASTERIZER           :: "rasterizer"     /* String (deprecated) */
-FC_OUTLINE              :: "outline"        /* Bool */
-FC_SCALABLE             :: "scalable"       /* Bool */
-FC_COLOR                :: "color"          /* Bool */
-FC_VARIABLE             :: "variable"       /* Bool */
-FC_SCALE                :: "scale"          /* double (deprecated) */
-FC_SYMBOL               :: "symbol"         /* Bool */
-FC_DPI                  :: "dpi"            /* double */
-FC_RGBA                 :: "rgba"           /* Int */
-FC_MINSPACE             :: "minspace"       /* Bool use minimum line spacing */
-FC_SOURCE               :: "source"         /* String (deprecated) */
-FC_CHARSET              :: "charset"        /* CharSet */
-FC_LANG                 :: "lang"           /* LangSet Set of RFC 3066 langs */
-FC_FONTVERSION          :: "fontversion"    /* Int from 'head' table */
-FC_FULLNAME             :: "fullname"       /* String */
-FC_FAMILYLANG           :: "familylang"     /* String RFC 3066 langs */
-FC_STYLELANG            :: "stylelang"      /* String RFC 3066 langs */
-FC_FULLNAMELANG         :: "fullnamelang"   /* String RFC 3066 langs */
-FC_CAPABILITY           :: "capability"     /* String */
-FC_FONTFORMAT           :: "fontformat"     /* String */
-FC_EMBOLDEN             :: "embolden"       /* Bool - true if emboldening needed*/
-FC_EMBEDDED_BITMAP      :: "embeddedbitmap" /* Bool - true to enable embedded bitmaps */
-FC_DECORATIVE           :: "decorative"     /* Bool - true if style is a decorative variant */
-FC_LCD_FILTER           :: "lcdfilter"      /* Int */
-FC_FONT_FEATURES        :: "fontfeatures"   /* String */
-FC_FONT_VARIATIONS      :: "fontvariations" /* String */
-FC_NAMELANG             :: "namelang"       /* String RFC 3866 langs */
-FC_PRGNAME              :: "prgname"        /* String */
-FC_HASH                 :: "hash"           /* String (deprecated) */
-FC_POSTSCRIPT_NAME      :: "postscriptname" /* String */
-FC_FONT_HAS_HINT        :: "fonthashint"    /* Bool - true if font has hinting */
-FC_ORDER                :: "order"          /* Integer */
-FC_DESKTOP_NAME         :: "desktop"        /* String */
-FC_NAMED_INSTANCE       :: "namedinstance"  /* Bool - true if font is named instance */
-FC_FONT_WRAPPER         :: "fontwrapper"    /* String */
+GLOBAL_ADVANCE       :: "globaladvance"  /* Bool (true) */
+WIDTH                :: "width"          /* Int */
+FILE                 :: "file"           /* String */
+INDEX                :: "index"          /* Int */
+FT_FACE              :: "ftface"         /* FT_Face */
+RASTERIZER           :: "rasterizer"     /* String (deprecated) */
+OUTLINE              :: "outline"        /* Bool */
+SCALABLE             :: "scalable"       /* Bool */
+COLOR                :: "color"          /* Bool */
+VARIABLE             :: "variable"       /* Bool */
+SCALE                :: "scale"          /* double (deprecated) */
+SYMBOL               :: "symbol"         /* Bool */
+DPI                  :: "dpi"            /* double */
+RGBA                 :: "rgba"           /* Int */
+MINSPACE             :: "minspace"       /* Bool use minimum line spacing */
+SOURCE               :: "source"         /* String (deprecated) */
+CHARSET              :: "charset"        /* CharSet */
+LANG                 :: "lang"           /* LangSet Set of RFC 3066 langs */
+FONTVERSION          :: "fontversion"    /* Int from 'head' table */
+FULLNAME             :: "fullname"       /* String */
+FAMILYLANG           :: "familylang"     /* String RFC 3066 langs */
+STYLELANG            :: "stylelang"      /* String RFC 3066 langs */
+FULLNAMELANG         :: "fullnamelang"   /* String RFC 3066 langs */
+CAPABILITY           :: "capability"     /* String */
+FONTFORMAT           :: "fontformat"     /* String */
+EMBOLDEN             :: "embolden"       /* Bool - true if emboldening needed*/
+EMBEDDED_BITMAP      :: "embeddedbitmap" /* Bool - true to enable embedded bitmaps */
+DECORATIVE           :: "decorative"     /* Bool - true if style is a decorative variant */
+LCD_FILTER           :: "lcdfilter"      /* Int */
+FONT_FEATURES        :: "fontfeatures"   /* String */
+FONT_VARIATIONS      :: "fontvariations" /* String */
+NAMELANG             :: "namelang"       /* String RFC 3866 langs */
+PRGNAME              :: "prgname"        /* String */
+HASH                 :: "hash"           /* String (deprecated) */
+POSTSCRIPT_NAME      :: "postscriptname" /* String */
+FONT_HAS_HINT        :: "fonthashint"    /* Bool - true if font has hinting */
+ORDER                :: "order"          /* Integer */
+DESKTOP_NAME         :: "desktop"        /* String */
+NAMED_INSTANCE       :: "namedinstance"  /* Bool - true if font is named instance */
+FONT_WRAPPER         :: "fontwrapper"    /* String */
 
 /* Adjust outline rasterizer */
-FC_CHARWIDTH            :: "charwidth"  /* Int */
-FC_CHAR_WIDTH           :: FC_CHARWIDTH
-FC_CHAR_HEIGHT          :: "charheight" /* Int */
-FC_MATRIX               :: "matrix"     /* FcMatrix */
-FC_WEIGHT_THIN          :: 0
-FC_WEIGHT_EXTRALIGHT    :: 40
-FC_WEIGHT_ULTRALIGHT    :: FC_WEIGHT_EXTRALIGHT
-FC_WEIGHT_LIGHT         :: 50
-FC_WEIGHT_DEMILIGHT     :: 55
-FC_WEIGHT_SEMILIGHT     :: FC_WEIGHT_DEMILIGHT
-FC_WEIGHT_BOOK          :: 75
-FC_WEIGHT_REGULAR       :: 80
-FC_WEIGHT_NORMAL        :: FC_WEIGHT_REGULAR
-FC_WEIGHT_MEDIUM        :: 100
-FC_WEIGHT_DEMIBOLD      :: 180
-FC_WEIGHT_SEMIBOLD      :: FC_WEIGHT_DEMIBOLD
-FC_WEIGHT_BOLD          :: 200
-FC_WEIGHT_EXTRABOLD     :: 205
-FC_WEIGHT_ULTRABOLD     :: FC_WEIGHT_EXTRABOLD
-FC_WEIGHT_BLACK         :: 210
-FC_WEIGHT_HEAVY         :: FC_WEIGHT_BLACK
-FC_WEIGHT_EXTRABLACK    :: 215
-FC_WEIGHT_ULTRABLACK    :: FC_WEIGHT_EXTRABLACK
-FC_SLANT_ROMAN          :: 0
-FC_SLANT_ITALIC         :: 100
-FC_SLANT_OBLIQUE        :: 110
-FC_WIDTH_ULTRACONDENSED :: 50
-FC_WIDTH_EXTRACONDENSED :: 63
-FC_WIDTH_CONDENSED      :: 75
-FC_WIDTH_SEMICONDENSED  :: 87
-FC_WIDTH_NORMAL         :: 100
-FC_WIDTH_SEMIEXPANDED   :: 113
-FC_WIDTH_EXPANDED       :: 125
-FC_WIDTH_EXTRAEXPANDED  :: 150
-FC_WIDTH_ULTRAEXPANDED  :: 200
-FC_PROPORTIONAL         :: 0
-FC_DUAL                 :: 90
-FC_MONO                 :: 100
-FC_CHARCELL             :: 110
+CHARWIDTH            :: "charwidth"  /* Int */
+CHAR_WIDTH           :: CHARWIDTH
+CHAR_HEIGHT          :: "charheight" /* Int */
+MATRIX               :: "matrix"     /* FcMatrix */
+WEIGHT_THIN          :: 0
+WEIGHT_EXTRALIGHT    :: 40
+WEIGHT_ULTRALIGHT    :: WEIGHT_EXTRALIGHT
+WEIGHT_LIGHT         :: 50
+WEIGHT_DEMILIGHT     :: 55
+WEIGHT_SEMILIGHT     :: WEIGHT_DEMILIGHT
+WEIGHT_BOOK          :: 75
+WEIGHT_REGULAR       :: 80
+WEIGHT_NORMAL        :: WEIGHT_REGULAR
+WEIGHT_MEDIUM        :: 100
+WEIGHT_DEMIBOLD      :: 180
+WEIGHT_SEMIBOLD      :: WEIGHT_DEMIBOLD
+WEIGHT_BOLD          :: 200
+WEIGHT_EXTRABOLD     :: 205
+WEIGHT_ULTRABOLD     :: WEIGHT_EXTRABOLD
+WEIGHT_BLACK         :: 210
+WEIGHT_HEAVY         :: WEIGHT_BLACK
+WEIGHT_EXTRABLACK    :: 215
+WEIGHT_ULTRABLACK    :: WEIGHT_EXTRABLACK
+SLANT_ROMAN          :: 0
+SLANT_ITALIC         :: 100
+SLANT_OBLIQUE        :: 110
+WIDTH_ULTRACONDENSED :: 50
+WIDTH_EXTRACONDENSED :: 63
+WIDTH_CONDENSED      :: 75
+WIDTH_SEMICONDENSED  :: 87
+WIDTH_NORMAL         :: 100
+WIDTH_SEMIEXPANDED   :: 113
+WIDTH_EXPANDED       :: 125
+WIDTH_EXTRAEXPANDED  :: 150
+WIDTH_ULTRAEXPANDED  :: 200
+PROPORTIONAL         :: 0
+DUAL                 :: 90
+MONO                 :: 100
+CHARCELL             :: 110
 
 /* sub-pixel order */
-FC_RGBA_UNKNOWN         :: 0
-FC_RGBA_RGB             :: 1
-FC_RGBA_BGR             :: 2
-FC_RGBA_VRGB            :: 3
-FC_RGBA_VBGR            :: 4
-FC_RGBA_NONE            :: 5
+RGBA_UNKNOWN         :: 0
+RGBA_RGB             :: 1
+RGBA_BGR             :: 2
+RGBA_VRGB            :: 3
+RGBA_VBGR            :: 4
+RGBA_NONE            :: 5
 
 /* hinting style */
-FC_HINT_NONE            :: 0
-FC_HINT_SLIGHT          :: 1
-FC_HINT_MEDIUM          :: 2
-FC_HINT_FULL            :: 3
+HINT_NONE            :: 0
+HINT_SLIGHT          :: 1
+HINT_MEDIUM          :: 2
+HINT_FULL            :: 3
 
 /* LCD filter */
-FC_LCD_NONE             :: 0
-FC_LCD_DEFAULT          :: 1
-FC_LCD_LIGHT            :: 2
-FC_LCD_LEGACY           :: 3
+LCD_NONE             :: 0
+LCD_DEFAULT          :: 1
+LCD_LIGHT            :: 2
+LCD_LEGACY           :: 3
 
 _Fc_Type :: enum i32 {
 	Unknown = -1,
@@ -186,35 +186,35 @@ _Fc_Type :: enum i32 {
 	Range   = 9,
 }
 
-Fc_Type :: _Fc_Type
+Type :: _Fc_Type
 
 _Fc_Matrix :: struct {
 	xx, xy, yx, yy: f64,
 }
 
-Fc_Matrix :: _Fc_Matrix
+Matrix :: _Fc_Matrix
 
 /*
 * A data structure to represent the available glyphs in a font.
 * This is represented as a sparse boolean btree.
 */
-Fc_Char_Set  :: _Fc_Char_Set
+Char_Set     :: _Fc_Char_Set
 _Fc_Char_Set :: struct {}
 
 _Fc_Object_Type :: struct {
 	object: cstring,
-	type:   Fc_Type,
+	type:   Type,
 }
 
-Fc_Object_Type :: _Fc_Object_Type
+Object_Type :: _Fc_Object_Type
 
 _Fc_Constant :: struct {
-	name:   ^Fc_Char8,
+	name:   ^Char8,
 	object: cstring,
 	value:  i32,
 }
 
-Fc_Constant :: _Fc_Constant
+Constant :: _Fc_Constant
 
 _Fc_Result :: enum u32 {
 	Match        = 0,
@@ -224,7 +224,7 @@ _Fc_Result :: enum u32 {
 	OutOfMemory  = 4,
 }
 
-Fc_Result :: _Fc_Result
+Result :: _Fc_Result
 
 _Fc_Value_Binding :: enum u32 {
 	Weak   = 0,
@@ -235,46 +235,46 @@ _Fc_Value_Binding :: enum u32 {
 	End    = 3,
 }
 
-Fc_Value_Binding :: _Fc_Value_Binding
-Fc_Pattern       :: _Fc_Pattern
-_Fc_Pattern      :: struct {}
+Value_Binding :: _Fc_Value_Binding
+Pattern       :: _Fc_Pattern
+_Fc_Pattern   :: struct {}
 
 _Fc_Pattern_Iter :: struct {
 	dummy1: rawptr,
 	dummy2: rawptr,
 }
 
-Fc_Pattern_Iter :: _Fc_Pattern_Iter
-_Fc_Lang_Set    :: struct {}
-Fc_Lang_Set     :: _Fc_Lang_Set
-Fc_Range        :: _Fc_Range
-_Fc_Range       :: struct {}
+Pattern_Iter :: _Fc_Pattern_Iter
+_Fc_Lang_Set :: struct {}
+Lang_Set     :: _Fc_Lang_Set
+Range        :: _Fc_Range
+_Fc_Range    :: struct {}
 
 _Fc_Value :: struct {
-	type: Fc_Type,
+	type: Type,
 
 	u: struct #raw_union {
-		s:  ^Fc_Char8,
+		s:  ^Char8,
 		i:  i32,
-		b:  Fc_Bool,
+		b:  Bool,
 		d:  f64,
-		m:  ^Fc_Matrix,
-		_c: ^Fc_Char_Set,
+		m:  ^Matrix,
+		_c: ^Char_Set,
 		f:  rawptr,
-		l:  ^Fc_Lang_Set,
-		r:  ^Fc_Range,
+		l:  ^Lang_Set,
+		r:  ^Range,
 	},
 }
 
-Fc_Value :: _Fc_Value
+Value :: _Fc_Value
 
 _Fc_Font_Set :: struct {
 	nfont: i32,
 	sfont: i32,
-	fonts: ^^Fc_Pattern,
+	fonts: ^^Pattern,
 }
 
-Fc_Font_Set :: _Fc_Font_Set
+Font_Set :: _Fc_Font_Set
 
 _Fc_Object_Set :: struct {
 	nobject: i32,
@@ -282,7 +282,7 @@ _Fc_Object_Set :: struct {
 	objects: ^cstring,
 }
 
-Fc_Object_Set :: _Fc_Object_Set
+Object_Set :: _Fc_Object_Set
 
 _Fc_Match_Kind :: enum u32 {
 	Pattern   = 0,
@@ -292,7 +292,7 @@ _Fc_Match_Kind :: enum u32 {
 	KindBegin = 0,
 }
 
-Fc_Match_Kind :: _Fc_Match_Kind
+Match_Kind :: _Fc_Match_Kind
 
 _Fc_Lang_Result :: enum u32 {
 	Equal              = 0,
@@ -301,14 +301,14 @@ _Fc_Lang_Result :: enum u32 {
 	DifferentLang      = 2,
 }
 
-Fc_Lang_Result :: _Fc_Lang_Result
+Lang_Result :: _Fc_Lang_Result
 
 _Fc_Set_Name :: enum u32 {
 	System      = 0,
 	Application = 1,
 }
 
-Fc_Set_Name :: _Fc_Set_Name
+Set_Name :: _Fc_Set_Name
 
 _Fc_Config_File_Info_Iter :: struct {
 	dummy1: rawptr,
@@ -316,330 +316,330 @@ _Fc_Config_File_Info_Iter :: struct {
 	dummy3: rawptr,
 }
 
-Fc_Config_File_Info_Iter :: _Fc_Config_File_Info_Iter
-Fc_Atomic                :: _Fc_Atomic
-_Fc_Atomic               :: struct {}
+Config_File_Info_Iter :: _Fc_Config_File_Info_Iter
+Atomic                :: _Fc_Atomic
+_Fc_Atomic            :: struct {}
 
-Fc_Endian :: enum u32 {
+Endian :: enum u32 {
 	Big    = 0,
 	Little = 1,
 }
 
-Fc_Config               :: _Fc_Config
-_Fc_Config              :: struct {}
-_Fc_Global_Cache        :: struct {}
-Fc_File_Cache           :: _Fc_Global_Cache
-Fc_Blanks               :: _Fc_Blanks
-_Fc_Blanks              :: struct {}
-_Fc_Str_List            :: struct {}
-Fc_Str_List             :: _Fc_Str_List
-_Fc_Str_Set             :: struct {}
-Fc_Str_Set              :: _Fc_Str_Set
-Fc_Cache                :: _Fc_Cache
-_Fc_Cache               :: struct {}
-Fc_Destroy_Func         :: proc "c" (data: rawptr)
-Fc_Filter_Font_Set_Func :: proc "c" (font: ^Fc_Pattern, user_data: rawptr) -> Fc_Bool
+Config               :: _Fc_Config
+_Fc_Config           :: struct {}
+_Fc_Global_Cache     :: struct {}
+File_Cache           :: _Fc_Global_Cache
+Blanks               :: _Fc_Blanks
+_Fc_Blanks           :: struct {}
+_Fc_Str_List         :: struct {}
+Str_List             :: _Fc_Str_List
+_Fc_Str_Set          :: struct {}
+Str_Set              :: _Fc_Str_Set
+Cache                :: _Fc_Cache
+_Fc_Cache            :: struct {}
+Destroy_Func         :: proc "c" (data: rawptr)
+Filter_Font_Set_Func :: proc "c" (font: ^Pattern, user_data: rawptr) -> Bool
 
-@(default_calling_convention="c")
+@(default_calling_convention="c", link_prefix="Fc")
 foreign lib {
 	/* fcblanks.c */
-	FcBlanksCreate   :: proc() -> ^Fc_Blanks ---
-	FcBlanksDestroy  :: proc(b: ^Fc_Blanks) ---
-	FcBlanksAdd      :: proc(b: ^Fc_Blanks, ucs4: Fc_Char32) -> Fc_Bool ---
-	FcBlanksIsMember :: proc(b: ^Fc_Blanks, ucs4: Fc_Char32) -> Fc_Bool ---
+	BlanksCreate   :: proc() -> ^Blanks ---
+	BlanksDestroy  :: proc(b: ^Blanks) ---
+	BlanksAdd      :: proc(b: ^Blanks, ucs4: Char32) -> Bool ---
+	BlanksIsMember :: proc(b: ^Blanks, ucs4: Char32) -> Bool ---
 
 	/* fccache.c */
-	FcCacheDir           :: proc(_c: ^Fc_Cache) -> ^Fc_Char8 ---
-	FcCacheCopySet       :: proc(_c: ^Fc_Cache) -> ^Fc_Font_Set ---
-	FcCacheSubdir        :: proc(_c: ^Fc_Cache, i: i32) -> ^Fc_Char8 ---
-	FcCacheNumSubdir     :: proc(_c: ^Fc_Cache) -> i32 ---
-	FcCacheNumFont       :: proc(_c: ^Fc_Cache) -> i32 ---
-	FcDirCacheUnlink     :: proc(dir: ^Fc_Char8, config: ^Fc_Config) -> Fc_Bool ---
-	FcDirCacheValid      :: proc(cache_file: ^Fc_Char8) -> Fc_Bool ---
-	FcDirCacheClean      :: proc(cache_dir: ^Fc_Char8, verbose: Fc_Bool) -> Fc_Bool ---
-	FcCacheCreateTagFile :: proc(config: ^Fc_Config) ---
-	FcDirCacheCreateUUID :: proc(dir: ^Fc_Char8, force: Fc_Bool, config: ^Fc_Config) -> Fc_Bool ---
-	FcDirCacheDeleteUUID :: proc(dir: ^Fc_Char8, config: ^Fc_Config) -> Fc_Bool ---
+	CacheDir           :: proc(_c: ^Cache) -> ^Char8 ---
+	CacheCopySet       :: proc(_c: ^Cache) -> ^Font_Set ---
+	CacheSubdir        :: proc(_c: ^Cache, i: i32) -> ^Char8 ---
+	CacheNumSubdir     :: proc(_c: ^Cache) -> i32 ---
+	CacheNumFont       :: proc(_c: ^Cache) -> i32 ---
+	DirCacheUnlink     :: proc(dir: ^Char8, config: ^Config) -> Bool ---
+	DirCacheValid      :: proc(cache_file: ^Char8) -> Bool ---
+	DirCacheClean      :: proc(cache_dir: ^Char8, verbose: Bool) -> Bool ---
+	CacheCreateTagFile :: proc(config: ^Config) ---
+	DirCacheCreateUUID :: proc(dir: ^Char8, force: Bool, config: ^Config) -> Bool ---
+	DirCacheDeleteUUID :: proc(dir: ^Char8, config: ^Config) -> Bool ---
 
 	/* fccfg.c */
-	FcConfigHome              :: proc() -> ^Fc_Char8 ---
-	FcConfigEnableHome        :: proc(enable: Fc_Bool) -> Fc_Bool ---
-	FcConfigGetFilename       :: proc(config: ^Fc_Config, url: ^Fc_Char8) -> ^Fc_Char8 ---
-	FcConfigFilename          :: proc(url: ^Fc_Char8) -> ^Fc_Char8 ---
-	FcConfigCreate            :: proc() -> ^Fc_Config ---
-	FcConfigReference         :: proc(config: ^Fc_Config) -> ^Fc_Config ---
-	FcConfigDestroy           :: proc(config: ^Fc_Config) ---
-	FcConfigSetCurrent        :: proc(config: ^Fc_Config) -> Fc_Bool ---
-	FcConfigGetCurrent        :: proc() -> ^Fc_Config ---
-	FcConfigUptoDate          :: proc(config: ^Fc_Config) -> Fc_Bool ---
-	FcConfigBuildFonts        :: proc(config: ^Fc_Config) -> Fc_Bool ---
-	FcConfigGetFontDirs       :: proc(config: ^Fc_Config) -> ^Fc_Str_List ---
-	FcConfigGetConfigDirs     :: proc(config: ^Fc_Config) -> ^Fc_Str_List ---
-	FcConfigGetConfigFiles    :: proc(config: ^Fc_Config) -> ^Fc_Str_List ---
-	FcConfigGetCache          :: proc(config: ^Fc_Config) -> ^Fc_Char8 ---
-	FcConfigGetBlanks         :: proc(config: ^Fc_Config) -> ^Fc_Blanks ---
-	FcConfigGetCacheDirs      :: proc(config: ^Fc_Config) -> ^Fc_Str_List ---
-	FcConfigGetRescanInterval :: proc(config: ^Fc_Config) -> i32 ---
-	FcConfigSetRescanInterval :: proc(config: ^Fc_Config, rescanInterval: i32) -> Fc_Bool ---
-	FcConfigGetFonts          :: proc(config: ^Fc_Config, set: Fc_Set_Name) -> ^Fc_Font_Set ---
-	FcConfigAcceptFont        :: proc(config: ^Fc_Config, font: ^Fc_Pattern) -> Fc_Bool ---
-	FcConfigAcceptFilter      :: proc(config: ^Fc_Config, font: ^Fc_Pattern) -> Fc_Bool ---
-	FcConfigAppFontAddFile    :: proc(config: ^Fc_Config, file: ^Fc_Char8) -> Fc_Bool ---
-	FcConfigAppFontAddDir     :: proc(config: ^Fc_Config, dir: ^Fc_Char8) -> Fc_Bool ---
-	FcConfigAppFontClear      :: proc(config: ^Fc_Config) ---
-	FcConfigPreferAppFont     :: proc(config: ^Fc_Config, flag: Fc_Bool) ---
-	FcConfigSubstituteWithPat :: proc(config: ^Fc_Config, p: ^Fc_Pattern, p_pat: ^Fc_Pattern, kind: Fc_Match_Kind) -> Fc_Bool ---
-	FcConfigSubstitute        :: proc(config: ^Fc_Config, p: ^Fc_Pattern, kind: Fc_Match_Kind) -> Fc_Bool ---
-	FcConfigGetSysRoot        :: proc(config: ^Fc_Config) -> ^Fc_Char8 ---
-	FcConfigSetSysRoot        :: proc(config: ^Fc_Config, sysroot: ^Fc_Char8) ---
-	FcConfigSetFontSetFilter  :: proc(config: ^Fc_Config, filter_func: Fc_Filter_Font_Set_Func, destroy_data_func: Fc_Destroy_Func, user_data: rawptr) -> ^Fc_Config ---
-	FcConfigFileInfoIterInit  :: proc(config: ^Fc_Config, iter: ^Fc_Config_File_Info_Iter) ---
-	FcConfigFileInfoIterNext  :: proc(config: ^Fc_Config, iter: ^Fc_Config_File_Info_Iter) -> Fc_Bool ---
-	FcConfigFileInfoIterGet   :: proc(config: ^Fc_Config, iter: ^Fc_Config_File_Info_Iter, name: ^^Fc_Char8, description: ^^Fc_Char8, enabled: ^Fc_Bool) -> Fc_Bool ---
+	ConfigHome              :: proc() -> ^Char8 ---
+	ConfigEnableHome        :: proc(enable: Bool) -> Bool ---
+	ConfigGetFilename       :: proc(config: ^Config, url: ^Char8) -> ^Char8 ---
+	ConfigFilename          :: proc(url: ^Char8) -> ^Char8 ---
+	ConfigCreate            :: proc() -> ^Config ---
+	ConfigReference         :: proc(config: ^Config) -> ^Config ---
+	ConfigDestroy           :: proc(config: ^Config) ---
+	ConfigSetCurrent        :: proc(config: ^Config) -> Bool ---
+	ConfigGetCurrent        :: proc() -> ^Config ---
+	ConfigUptoDate          :: proc(config: ^Config) -> Bool ---
+	ConfigBuildFonts        :: proc(config: ^Config) -> Bool ---
+	ConfigGetFontDirs       :: proc(config: ^Config) -> ^Str_List ---
+	ConfigGetConfigDirs     :: proc(config: ^Config) -> ^Str_List ---
+	ConfigGetConfigFiles    :: proc(config: ^Config) -> ^Str_List ---
+	ConfigGetCache          :: proc(config: ^Config) -> ^Char8 ---
+	ConfigGetBlanks         :: proc(config: ^Config) -> ^Blanks ---
+	ConfigGetCacheDirs      :: proc(config: ^Config) -> ^Str_List ---
+	ConfigGetRescanInterval :: proc(config: ^Config) -> i32 ---
+	ConfigSetRescanInterval :: proc(config: ^Config, rescanInterval: i32) -> Bool ---
+	ConfigGetFonts          :: proc(config: ^Config, set: Set_Name) -> ^Font_Set ---
+	ConfigAcceptFont        :: proc(config: ^Config, font: ^Pattern) -> Bool ---
+	ConfigAcceptFilter      :: proc(config: ^Config, font: ^Pattern) -> Bool ---
+	ConfigAppFontAddFile    :: proc(config: ^Config, file: ^Char8) -> Bool ---
+	ConfigAppFontAddDir     :: proc(config: ^Config, dir: ^Char8) -> Bool ---
+	ConfigAppFontClear      :: proc(config: ^Config) ---
+	ConfigPreferAppFont     :: proc(config: ^Config, flag: Bool) ---
+	ConfigSubstituteWithPat :: proc(config: ^Config, p: ^Pattern, p_pat: ^Pattern, kind: Match_Kind) -> Bool ---
+	ConfigSubstitute        :: proc(config: ^Config, p: ^Pattern, kind: Match_Kind) -> Bool ---
+	ConfigGetSysRoot        :: proc(config: ^Config) -> ^Char8 ---
+	ConfigSetSysRoot        :: proc(config: ^Config, sysroot: ^Char8) ---
+	ConfigSetFontSetFilter  :: proc(config: ^Config, filter_func: Filter_Font_Set_Func, destroy_data_func: Destroy_Func, user_data: rawptr) -> ^Config ---
+	ConfigFileInfoIterInit  :: proc(config: ^Config, iter: ^Config_File_Info_Iter) ---
+	ConfigFileInfoIterNext  :: proc(config: ^Config, iter: ^Config_File_Info_Iter) -> Bool ---
+	ConfigFileInfoIterGet   :: proc(config: ^Config, iter: ^Config_File_Info_Iter, name: ^^Char8, description: ^^Char8, enabled: ^Bool) -> Bool ---
 
 	/* fccharset.c */
-	FcCharSetCreate :: proc() -> ^Fc_Char_Set ---
+	CharSetCreate :: proc() -> ^Char_Set ---
 
 	/* deprecated alias for FcCharSetCreate */
-	FcCharSetNew            :: proc() -> ^Fc_Char_Set ---
-	FcCharSetDestroy        :: proc(fcs: ^Fc_Char_Set) ---
-	FcCharSetAddChar        :: proc(fcs: ^Fc_Char_Set, ucs4: Fc_Char32) -> Fc_Bool ---
-	FcCharSetDelChar        :: proc(fcs: ^Fc_Char_Set, ucs4: Fc_Char32) -> Fc_Bool ---
-	FcCharSetCopy           :: proc(src: ^Fc_Char_Set) -> ^Fc_Char_Set ---
-	FcCharSetEqual          :: proc(a: ^Fc_Char_Set, b: ^Fc_Char_Set) -> Fc_Bool ---
-	FcCharSetIntersect      :: proc(a: ^Fc_Char_Set, b: ^Fc_Char_Set) -> ^Fc_Char_Set ---
-	FcCharSetUnion          :: proc(a: ^Fc_Char_Set, b: ^Fc_Char_Set) -> ^Fc_Char_Set ---
-	FcCharSetSubtract       :: proc(a: ^Fc_Char_Set, b: ^Fc_Char_Set) -> ^Fc_Char_Set ---
-	FcCharSetMerge          :: proc(a: ^Fc_Char_Set, b: ^Fc_Char_Set, changed: ^Fc_Bool) -> Fc_Bool ---
-	FcCharSetHasChar        :: proc(fcs: ^Fc_Char_Set, ucs4: Fc_Char32) -> Fc_Bool ---
-	FcCharSetCount          :: proc(a: ^Fc_Char_Set) -> Fc_Char32 ---
-	FcCharSetIntersectCount :: proc(a: ^Fc_Char_Set, b: ^Fc_Char_Set) -> Fc_Char32 ---
-	FcCharSetSubtractCount  :: proc(a: ^Fc_Char_Set, b: ^Fc_Char_Set) -> Fc_Char32 ---
-	FcCharSetIsSubset       :: proc(a: ^Fc_Char_Set, b: ^Fc_Char_Set) -> Fc_Bool ---
+	CharSetNew            :: proc() -> ^Char_Set ---
+	CharSetDestroy        :: proc(fcs: ^Char_Set) ---
+	CharSetAddChar        :: proc(fcs: ^Char_Set, ucs4: Char32) -> Bool ---
+	CharSetDelChar        :: proc(fcs: ^Char_Set, ucs4: Char32) -> Bool ---
+	CharSetCopy           :: proc(src: ^Char_Set) -> ^Char_Set ---
+	CharSetEqual          :: proc(a: ^Char_Set, b: ^Char_Set) -> Bool ---
+	CharSetIntersect      :: proc(a: ^Char_Set, b: ^Char_Set) -> ^Char_Set ---
+	CharSetUnion          :: proc(a: ^Char_Set, b: ^Char_Set) -> ^Char_Set ---
+	CharSetSubtract       :: proc(a: ^Char_Set, b: ^Char_Set) -> ^Char_Set ---
+	CharSetMerge          :: proc(a: ^Char_Set, b: ^Char_Set, changed: ^Bool) -> Bool ---
+	CharSetHasChar        :: proc(fcs: ^Char_Set, ucs4: Char32) -> Bool ---
+	CharSetCount          :: proc(a: ^Char_Set) -> Char32 ---
+	CharSetIntersectCount :: proc(a: ^Char_Set, b: ^Char_Set) -> Char32 ---
+	CharSetSubtractCount  :: proc(a: ^Char_Set, b: ^Char_Set) -> Char32 ---
+	CharSetIsSubset       :: proc(a: ^Char_Set, b: ^Char_Set) -> Bool ---
 }
 
-FC_CHARSET_MAP_SIZE :: (256/32)
-FC_CHARSET_DONE     :: ((FcChar32)-1)
+CHARSET_MAP_SIZE :: (256/32)
+CHARSET_DONE     :: ((FcChar32)-1)
 
-@(default_calling_convention="c")
+@(default_calling_convention="c", link_prefix="Fc")
 foreign lib {
-	FcCharSetFirstPage :: proc(a: ^Fc_Char_Set, _map: ^[8]Fc_Char32, next: ^Fc_Char32) -> Fc_Char32 ---
-	FcCharSetNextPage  :: proc(a: ^Fc_Char_Set, _map: ^[8]Fc_Char32, next: ^Fc_Char32) -> Fc_Char32 ---
+	CharSetFirstPage :: proc(a: ^Char_Set, _map: ^[8]Char32, next: ^Char32) -> Char32 ---
+	CharSetNextPage  :: proc(a: ^Char_Set, _map: ^[8]Char32, next: ^Char32) -> Char32 ---
 
 	/*
 	* old coverage API, rather hard to use correctly
 	*/
-	FcCharSetCoverage :: proc(a: ^Fc_Char_Set, page: Fc_Char32, result: ^Fc_Char32) -> Fc_Char32 ---
+	CharSetCoverage :: proc(a: ^Char_Set, page: Char32, result: ^Char32) -> Char32 ---
 
 	/* fcdbg.c */
-	FcValuePrint   :: proc(v: Fc_Value) ---
-	FcPatternPrint :: proc(p: ^Fc_Pattern) ---
-	FcFontSetPrint :: proc(s: ^Fc_Font_Set) ---
+	ValuePrint   :: proc(v: Value) ---
+	PatternPrint :: proc(p: ^Pattern) ---
+	FontSetPrint :: proc(s: ^Font_Set) ---
 
 	/* fcdefault.c */
-	FcConfigGetDefaultLangs      :: proc(config: ^Fc_Config) -> ^Fc_Str_Set ---
-	FcGetDefaultLangs            :: proc() -> ^Fc_Str_Set ---
-	FcConfigSetDefaultSubstitute :: proc(config: ^Fc_Config, pattern: ^Fc_Pattern) ---
-	FcDefaultSubstitute          :: proc(pattern: ^Fc_Pattern) ---
+	ConfigGetDefaultLangs      :: proc(config: ^Config) -> ^Str_Set ---
+	GetDefaultLangs            :: proc() -> ^Str_Set ---
+	ConfigSetDefaultSubstitute :: proc(config: ^Config, pattern: ^Pattern) ---
+	DefaultSubstitute          :: proc(pattern: ^Pattern) ---
 
 	/* fcdir.c */
-	FcFileIsDir        :: proc(file: ^Fc_Char8) -> Fc_Bool ---
-	FcFileScan         :: proc(set: ^Fc_Font_Set, dirs: ^Fc_Str_Set, cache: ^Fc_File_Cache, blanks: ^Fc_Blanks, file: ^Fc_Char8, force: Fc_Bool) -> Fc_Bool ---
-	FcDirScan          :: proc(set: ^Fc_Font_Set, dirs: ^Fc_Str_Set, cache: ^Fc_File_Cache, blanks: ^Fc_Blanks, dir: ^Fc_Char8, force: Fc_Bool) -> Fc_Bool ---
-	FcDirSave          :: proc(set: ^Fc_Font_Set, dirs: ^Fc_Str_Set, dir: ^Fc_Char8) -> Fc_Bool ---
-	FcDirCacheLoad     :: proc(dir: ^Fc_Char8, config: ^Fc_Config, cache_file: ^^Fc_Char8) -> ^Fc_Cache ---
-	FcDirCacheRescan   :: proc(dir: ^Fc_Char8, config: ^Fc_Config) -> ^Fc_Cache ---
-	FcDirCacheRead     :: proc(dir: ^Fc_Char8, force: Fc_Bool, config: ^Fc_Config) -> ^Fc_Cache ---
-	FcDirCacheLoadFile :: proc(cache_file: ^Fc_Char8, file_stat: ^Stat) -> ^Fc_Cache ---
-	FcDirCacheUnload   :: proc(cache: ^Fc_Cache) ---
+	FileIsDir        :: proc(file: ^Char8) -> Bool ---
+	FileScan         :: proc(set: ^Font_Set, dirs: ^Str_Set, cache: ^File_Cache, blanks: ^Blanks, file: ^Char8, force: Bool) -> Bool ---
+	DirScan          :: proc(set: ^Font_Set, dirs: ^Str_Set, cache: ^File_Cache, blanks: ^Blanks, dir: ^Char8, force: Bool) -> Bool ---
+	DirSave          :: proc(set: ^Font_Set, dirs: ^Str_Set, dir: ^Char8) -> Bool ---
+	DirCacheLoad     :: proc(dir: ^Char8, config: ^Config, cache_file: ^^Char8) -> ^Cache ---
+	DirCacheRescan   :: proc(dir: ^Char8, config: ^Config) -> ^Cache ---
+	DirCacheRead     :: proc(dir: ^Char8, force: Bool, config: ^Config) -> ^Cache ---
+	DirCacheLoadFile :: proc(cache_file: ^Char8, file_stat: ^Stat) -> ^Cache ---
+	DirCacheUnload   :: proc(cache: ^Cache) ---
 
 	/* fcfreetype.c */
-	FcFreeTypeQuery    :: proc(file: ^Fc_Char8, id: u32, blanks: ^Fc_Blanks, count: ^i32) -> ^Fc_Pattern ---
-	FcFreeTypeQueryAll :: proc(file: ^Fc_Char8, id: u32, blanks: ^Fc_Blanks, count: ^i32, set: ^Fc_Font_Set) -> u32 ---
+	FreeTypeQuery    :: proc(file: ^Char8, id: u32, blanks: ^Blanks, count: ^i32) -> ^Pattern ---
+	FreeTypeQueryAll :: proc(file: ^Char8, id: u32, blanks: ^Blanks, count: ^i32, set: ^Font_Set) -> u32 ---
 
 	/* fcfs.c */
-	FcFontSetCreate  :: proc() -> ^Fc_Font_Set ---
-	FcFontSetDestroy :: proc(s: ^Fc_Font_Set) ---
-	FcFontSetAdd     :: proc(s: ^Fc_Font_Set, font: ^Fc_Pattern) -> Fc_Bool ---
+	FontSetCreate  :: proc() -> ^Font_Set ---
+	FontSetDestroy :: proc(s: ^Font_Set) ---
+	FontSetAdd     :: proc(s: ^Font_Set, font: ^Pattern) -> Bool ---
 
 	/* fcinit.c */
-	FcInitLoadConfig         :: proc() -> ^Fc_Config ---
-	FcInitLoadConfigAndFonts :: proc() -> ^Fc_Config ---
-	FcInit                   :: proc() -> Fc_Bool ---
-	FcFini                   :: proc() ---
-	FcGetVersion             :: proc() -> i32 ---
-	FcInitReinitialize       :: proc() -> Fc_Bool ---
-	FcInitBringUptoDate      :: proc() -> Fc_Bool ---
+	InitLoadConfig         :: proc() -> ^Config ---
+	InitLoadConfigAndFonts :: proc() -> ^Config ---
+	Init                   :: proc() -> Bool ---
+	Fini                   :: proc() ---
+	GetVersion             :: proc() -> i32 ---
+	InitReinitialize       :: proc() -> Bool ---
+	InitBringUptoDate      :: proc() -> Bool ---
 
 	/* fclang.c */
-	FcGetLangs        :: proc() -> ^Fc_Str_Set ---
-	FcLangNormalize   :: proc(lang: ^Fc_Char8) -> ^Fc_Char8 ---
-	FcLangGetCharSet  :: proc(lang: ^Fc_Char8) -> ^Fc_Char_Set ---
-	FcLangSetCreate   :: proc() -> ^Fc_Lang_Set ---
-	FcLangSetDestroy  :: proc(ls: ^Fc_Lang_Set) ---
-	FcLangSetCopy     :: proc(ls: ^Fc_Lang_Set) -> ^Fc_Lang_Set ---
-	FcLangSetAdd      :: proc(ls: ^Fc_Lang_Set, lang: ^Fc_Char8) -> Fc_Bool ---
-	FcLangSetDel      :: proc(ls: ^Fc_Lang_Set, lang: ^Fc_Char8) -> Fc_Bool ---
-	FcLangSetHasLang  :: proc(ls: ^Fc_Lang_Set, lang: ^Fc_Char8) -> Fc_Lang_Result ---
-	FcLangSetCompare  :: proc(lsa: ^Fc_Lang_Set, lsb: ^Fc_Lang_Set) -> Fc_Lang_Result ---
-	FcLangSetContains :: proc(lsa: ^Fc_Lang_Set, lsb: ^Fc_Lang_Set) -> Fc_Bool ---
-	FcLangSetEqual    :: proc(lsa: ^Fc_Lang_Set, lsb: ^Fc_Lang_Set) -> Fc_Bool ---
-	FcLangSetHash     :: proc(ls: ^Fc_Lang_Set) -> Fc_Char32 ---
-	FcLangSetGetLangs :: proc(ls: ^Fc_Lang_Set) -> ^Fc_Str_Set ---
-	FcLangSetUnion    :: proc(a: ^Fc_Lang_Set, b: ^Fc_Lang_Set) -> ^Fc_Lang_Set ---
-	FcLangSetSubtract :: proc(a: ^Fc_Lang_Set, b: ^Fc_Lang_Set) -> ^Fc_Lang_Set ---
+	GetLangs        :: proc() -> ^Str_Set ---
+	LangNormalize   :: proc(lang: ^Char8) -> ^Char8 ---
+	LangGetCharSet  :: proc(lang: ^Char8) -> ^Char_Set ---
+	LangSetCreate   :: proc() -> ^Lang_Set ---
+	LangSetDestroy  :: proc(ls: ^Lang_Set) ---
+	LangSetCopy     :: proc(ls: ^Lang_Set) -> ^Lang_Set ---
+	LangSetAdd      :: proc(ls: ^Lang_Set, lang: ^Char8) -> Bool ---
+	LangSetDel      :: proc(ls: ^Lang_Set, lang: ^Char8) -> Bool ---
+	LangSetHasLang  :: proc(ls: ^Lang_Set, lang: ^Char8) -> Lang_Result ---
+	LangSetCompare  :: proc(lsa: ^Lang_Set, lsb: ^Lang_Set) -> Lang_Result ---
+	LangSetContains :: proc(lsa: ^Lang_Set, lsb: ^Lang_Set) -> Bool ---
+	LangSetEqual    :: proc(lsa: ^Lang_Set, lsb: ^Lang_Set) -> Bool ---
+	LangSetHash     :: proc(ls: ^Lang_Set) -> Char32 ---
+	LangSetGetLangs :: proc(ls: ^Lang_Set) -> ^Str_Set ---
+	LangSetUnion    :: proc(a: ^Lang_Set, b: ^Lang_Set) -> ^Lang_Set ---
+	LangSetSubtract :: proc(a: ^Lang_Set, b: ^Lang_Set) -> ^Lang_Set ---
 
 	/* fclist.c */
-	FcObjectSetCreate  :: proc() -> ^Fc_Object_Set ---
-	FcObjectSetAdd     :: proc(os: ^Fc_Object_Set, object: cstring) -> Fc_Bool ---
-	FcObjectSetDestroy :: proc(os: ^Fc_Object_Set) ---
-	FcObjectSetVaBuild :: proc(first: cstring, va: i32) -> ^Fc_Object_Set ---
-	FcObjectSetBuild   :: proc(first: cstring, #c_vararg _: ..any) -> ^Fc_Object_Set ---
-	FcFontSetList      :: proc(config: ^Fc_Config, sets: ^^Fc_Font_Set, nsets: i32, p: ^Fc_Pattern, os: ^Fc_Object_Set) -> ^Fc_Font_Set ---
-	FcFontList         :: proc(config: ^Fc_Config, p: ^Fc_Pattern, os: ^Fc_Object_Set) -> ^Fc_Font_Set ---
+	ObjectSetCreate  :: proc() -> ^Object_Set ---
+	ObjectSetAdd     :: proc(os: ^Object_Set, object: cstring) -> Bool ---
+	ObjectSetDestroy :: proc(os: ^Object_Set) ---
+	ObjectSetVaBuild :: proc(first: cstring, va: i32) -> ^Object_Set ---
+	ObjectSetBuild   :: proc(first: cstring, #c_vararg _: ..any) -> ^Object_Set ---
+	FontSetList      :: proc(config: ^Config, sets: ^^Font_Set, nsets: i32, p: ^Pattern, os: ^Object_Set) -> ^Font_Set ---
+	FontList         :: proc(config: ^Config, p: ^Pattern, os: ^Object_Set) -> ^Font_Set ---
 
 	/* fcatomic.c */
-	FcAtomicCreate      :: proc(file: ^Fc_Char8) -> ^Fc_Atomic ---
-	FcAtomicLock        :: proc(atomic: ^Fc_Atomic) -> Fc_Bool ---
-	FcAtomicNewFile     :: proc(atomic: ^Fc_Atomic) -> ^Fc_Char8 ---
-	FcAtomicOrigFile    :: proc(atomic: ^Fc_Atomic) -> ^Fc_Char8 ---
-	FcAtomicReplaceOrig :: proc(atomic: ^Fc_Atomic) -> Fc_Bool ---
-	FcAtomicDeleteNew   :: proc(atomic: ^Fc_Atomic) ---
-	FcAtomicUnlock      :: proc(atomic: ^Fc_Atomic) ---
-	FcAtomicDestroy     :: proc(atomic: ^Fc_Atomic) ---
+	AtomicCreate      :: proc(file: ^Char8) -> ^Atomic ---
+	AtomicLock        :: proc(atomic: ^Atomic) -> Bool ---
+	AtomicNewFile     :: proc(atomic: ^Atomic) -> ^Char8 ---
+	AtomicOrigFile    :: proc(atomic: ^Atomic) -> ^Char8 ---
+	AtomicReplaceOrig :: proc(atomic: ^Atomic) -> Bool ---
+	AtomicDeleteNew   :: proc(atomic: ^Atomic) ---
+	AtomicUnlock      :: proc(atomic: ^Atomic) ---
+	AtomicDestroy     :: proc(atomic: ^Atomic) ---
 
 	/* fcmatch.c */
-	FcFontSetMatch       :: proc(config: ^Fc_Config, sets: ^^Fc_Font_Set, nsets: i32, p: ^Fc_Pattern, result: ^Fc_Result) -> ^Fc_Pattern ---
-	FcFontMatch          :: proc(config: ^Fc_Config, p: ^Fc_Pattern, result: ^Fc_Result) -> ^Fc_Pattern ---
-	FcFontRenderPrepare  :: proc(config: ^Fc_Config, pat: ^Fc_Pattern, font: ^Fc_Pattern) -> ^Fc_Pattern ---
-	FcFontSetSort        :: proc(config: ^Fc_Config, sets: ^^Fc_Font_Set, nsets: i32, p: ^Fc_Pattern, trim: Fc_Bool, csp: ^^Fc_Char_Set, result: ^Fc_Result) -> ^Fc_Font_Set ---
-	FcFontSort           :: proc(config: ^Fc_Config, p: ^Fc_Pattern, trim: Fc_Bool, csp: ^^Fc_Char_Set, result: ^Fc_Result) -> ^Fc_Font_Set ---
-	FcFontSetSortDestroy :: proc(fs: ^Fc_Font_Set) ---
+	FontSetMatch       :: proc(config: ^Config, sets: ^^Font_Set, nsets: i32, p: ^Pattern, result: ^Result) -> ^Pattern ---
+	FontMatch          :: proc(config: ^Config, p: ^Pattern, result: ^Result) -> ^Pattern ---
+	FontRenderPrepare  :: proc(config: ^Config, pat: ^Pattern, font: ^Pattern) -> ^Pattern ---
+	FontSetSort        :: proc(config: ^Config, sets: ^^Font_Set, nsets: i32, p: ^Pattern, trim: Bool, csp: ^^Char_Set, result: ^Result) -> ^Font_Set ---
+	FontSort           :: proc(config: ^Config, p: ^Pattern, trim: Bool, csp: ^^Char_Set, result: ^Result) -> ^Font_Set ---
+	FontSetSortDestroy :: proc(fs: ^Font_Set) ---
 
 	/* fcmatrix.c */
-	FcMatrixCopy     :: proc(mat: ^Fc_Matrix) -> ^Fc_Matrix ---
-	FcMatrixEqual    :: proc(mat1: ^Fc_Matrix, mat2: ^Fc_Matrix) -> Fc_Bool ---
-	FcMatrixMultiply :: proc(result: ^Fc_Matrix, a: ^Fc_Matrix, b: ^Fc_Matrix) ---
-	FcMatrixRotate   :: proc(m: ^Fc_Matrix, _c: f64, s: f64) ---
-	FcMatrixScale    :: proc(m: ^Fc_Matrix, sx: f64, sy: f64) ---
-	FcMatrixShear    :: proc(m: ^Fc_Matrix, sh: f64, sv: f64) ---
+	MatrixCopy     :: proc(mat: ^Matrix) -> ^Matrix ---
+	MatrixEqual    :: proc(mat1: ^Matrix, mat2: ^Matrix) -> Bool ---
+	MatrixMultiply :: proc(result: ^Matrix, a: ^Matrix, b: ^Matrix) ---
+	MatrixRotate   :: proc(m: ^Matrix, _c: f64, s: f64) ---
+	MatrixScale    :: proc(m: ^Matrix, sx: f64, sy: f64) ---
+	MatrixShear    :: proc(m: ^Matrix, sh: f64, sv: f64) ---
 
 	/* Deprecated.  Does nothing.  Returns FcFalse. */
-	FcNameRegisterObjectTypes :: proc(types: ^Fc_Object_Type, ntype: i32) -> Fc_Bool ---
+	NameRegisterObjectTypes :: proc(types: ^Object_Type, ntype: i32) -> Bool ---
 
 	/* Deprecated.  Does nothing.  Returns FcFalse. */
-	FcNameUnregisterObjectTypes :: proc(types: ^Fc_Object_Type, ntype: i32) -> Fc_Bool ---
-	FcNameGetObjectType         :: proc(object: cstring) -> ^Fc_Object_Type ---
+	NameUnregisterObjectTypes :: proc(types: ^Object_Type, ntype: i32) -> Bool ---
+	NameGetObjectType         :: proc(object: cstring) -> ^Object_Type ---
 
 	/* Deprecated.  Does nothing.  Returns FcFalse. */
-	FcNameRegisterConstants :: proc(consts: ^Fc_Constant, nconsts: i32) -> Fc_Bool ---
+	NameRegisterConstants :: proc(consts: ^Constant, nconsts: i32) -> Bool ---
 
 	/* Deprecated.  Does nothing.  Returns FcFalse. */
-	FcNameUnregisterConstants :: proc(consts: ^Fc_Constant, nconsts: i32) -> Fc_Bool ---
-	FcNameGetConstant         :: proc(_string: ^Fc_Char8) -> ^Fc_Constant ---
-	FcNameGetConstantFor      :: proc(_string: ^Fc_Char8, object: cstring) -> ^Fc_Constant ---
-	FcNameConstant            :: proc(_string: ^Fc_Char8, result: ^i32) -> Fc_Bool ---
-	FcNameParse               :: proc(name: ^Fc_Char8) -> ^Fc_Pattern ---
-	FcNameUnparse             :: proc(pat: ^Fc_Pattern) -> ^Fc_Char8 ---
+	NameUnregisterConstants :: proc(consts: ^Constant, nconsts: i32) -> Bool ---
+	NameGetConstant         :: proc(_string: ^Char8) -> ^Constant ---
+	NameGetConstantFor      :: proc(_string: ^Char8, object: cstring) -> ^Constant ---
+	NameConstant            :: proc(_string: ^Char8, result: ^i32) -> Bool ---
+	NameParse               :: proc(name: ^Char8) -> ^Pattern ---
+	NameUnparse             :: proc(pat: ^Pattern) -> ^Char8 ---
 
 	/* fcpat.c */
-	FcPatternCreate         :: proc() -> ^Fc_Pattern ---
-	FcPatternDuplicate      :: proc(p: ^Fc_Pattern) -> ^Fc_Pattern ---
-	FcPatternReference      :: proc(p: ^Fc_Pattern) ---
-	FcPatternFilter         :: proc(p: ^Fc_Pattern, os: ^Fc_Object_Set) -> ^Fc_Pattern ---
-	FcValueDestroy          :: proc(v: Fc_Value) ---
-	FcValueEqual            :: proc(va: Fc_Value, vb: Fc_Value) -> Fc_Bool ---
-	FcValueSave             :: proc(v: Fc_Value) -> Fc_Value ---
-	FcPatternDestroy        :: proc(p: ^Fc_Pattern) ---
-	FcPatternObjectCount    :: proc(pat: ^Fc_Pattern) -> i32 ---
-	FcPatternEqual          :: proc(pa: ^Fc_Pattern, pb: ^Fc_Pattern) -> Fc_Bool ---
-	FcPatternEqualSubset    :: proc(pa: ^Fc_Pattern, pb: ^Fc_Pattern, os: ^Fc_Object_Set) -> Fc_Bool ---
-	FcPatternHash           :: proc(p: ^Fc_Pattern) -> Fc_Char32 ---
-	FcPatternAdd            :: proc(p: ^Fc_Pattern, object: cstring, value: Fc_Value, append: Fc_Bool) -> Fc_Bool ---
-	FcPatternAddWeak        :: proc(p: ^Fc_Pattern, object: cstring, value: Fc_Value, append: Fc_Bool) -> Fc_Bool ---
-	FcPatternGet            :: proc(p: ^Fc_Pattern, object: cstring, id: i32, v: ^Fc_Value) -> Fc_Result ---
-	FcPatternGetWithBinding :: proc(p: ^Fc_Pattern, object: cstring, id: i32, v: ^Fc_Value, b: ^Fc_Value_Binding) -> Fc_Result ---
-	FcPatternDel            :: proc(p: ^Fc_Pattern, object: cstring) -> Fc_Bool ---
-	FcPatternRemove         :: proc(p: ^Fc_Pattern, object: cstring, id: i32) -> Fc_Bool ---
-	FcPatternAddInteger     :: proc(p: ^Fc_Pattern, object: cstring, i: i32) -> Fc_Bool ---
-	FcPatternAddDouble      :: proc(p: ^Fc_Pattern, object: cstring, d: f64) -> Fc_Bool ---
-	FcPatternAddString      :: proc(p: ^Fc_Pattern, object: cstring, s: ^Fc_Char8) -> Fc_Bool ---
-	FcPatternAddMatrix      :: proc(p: ^Fc_Pattern, object: cstring, s: ^Fc_Matrix) -> Fc_Bool ---
-	FcPatternAddCharSet     :: proc(p: ^Fc_Pattern, object: cstring, _c: ^Fc_Char_Set) -> Fc_Bool ---
-	FcPatternAddBool        :: proc(p: ^Fc_Pattern, object: cstring, b: Fc_Bool) -> Fc_Bool ---
-	FcPatternAddLangSet     :: proc(p: ^Fc_Pattern, object: cstring, ls: ^Fc_Lang_Set) -> Fc_Bool ---
-	FcPatternAddRange       :: proc(p: ^Fc_Pattern, object: cstring, r: ^Fc_Range) -> Fc_Bool ---
-	FcPatternGetInteger     :: proc(p: ^Fc_Pattern, object: cstring, n: i32, i: ^i32) -> Fc_Result ---
-	FcPatternGetDouble      :: proc(p: ^Fc_Pattern, object: cstring, n: i32, d: ^f64) -> Fc_Result ---
-	FcPatternGetString      :: proc(p: ^Fc_Pattern, object: cstring, n: i32, s: ^^Fc_Char8) -> Fc_Result ---
-	FcPatternGetMatrix      :: proc(p: ^Fc_Pattern, object: cstring, n: i32, s: ^^Fc_Matrix) -> Fc_Result ---
-	FcPatternGetCharSet     :: proc(p: ^Fc_Pattern, object: cstring, n: i32, _c: ^^Fc_Char_Set) -> Fc_Result ---
-	FcPatternGetBool        :: proc(p: ^Fc_Pattern, object: cstring, n: i32, b: ^Fc_Bool) -> Fc_Result ---
-	FcPatternGetLangSet     :: proc(p: ^Fc_Pattern, object: cstring, n: i32, ls: ^^Fc_Lang_Set) -> Fc_Result ---
-	FcPatternGetRange       :: proc(p: ^Fc_Pattern, object: cstring, id: i32, r: ^^Fc_Range) -> Fc_Result ---
-	FcPatternVaBuild        :: proc(p: ^Fc_Pattern, va: i32) -> ^Fc_Pattern ---
-	FcPatternBuild          :: proc(p: ^Fc_Pattern, #c_vararg _: ..any) -> ^Fc_Pattern ---
-	FcPatternFormat         :: proc(pat: ^Fc_Pattern, format: ^Fc_Char8) -> ^Fc_Char8 ---
+	PatternCreate         :: proc() -> ^Pattern ---
+	PatternDuplicate      :: proc(p: ^Pattern) -> ^Pattern ---
+	PatternReference      :: proc(p: ^Pattern) ---
+	PatternFilter         :: proc(p: ^Pattern, os: ^Object_Set) -> ^Pattern ---
+	ValueDestroy          :: proc(v: Value) ---
+	ValueEqual            :: proc(va: Value, vb: Value) -> Bool ---
+	ValueSave             :: proc(v: Value) -> Value ---
+	PatternDestroy        :: proc(p: ^Pattern) ---
+	PatternObjectCount    :: proc(pat: ^Pattern) -> i32 ---
+	PatternEqual          :: proc(pa: ^Pattern, pb: ^Pattern) -> Bool ---
+	PatternEqualSubset    :: proc(pa: ^Pattern, pb: ^Pattern, os: ^Object_Set) -> Bool ---
+	PatternHash           :: proc(p: ^Pattern) -> Char32 ---
+	PatternAdd            :: proc(p: ^Pattern, object: cstring, value: Value, append: Bool) -> Bool ---
+	PatternAddWeak        :: proc(p: ^Pattern, object: cstring, value: Value, append: Bool) -> Bool ---
+	PatternGet            :: proc(p: ^Pattern, object: cstring, id: i32, v: ^Value) -> Result ---
+	PatternGetWithBinding :: proc(p: ^Pattern, object: cstring, id: i32, v: ^Value, b: ^Value_Binding) -> Result ---
+	PatternDel            :: proc(p: ^Pattern, object: cstring) -> Bool ---
+	PatternRemove         :: proc(p: ^Pattern, object: cstring, id: i32) -> Bool ---
+	PatternAddInteger     :: proc(p: ^Pattern, object: cstring, i: i32) -> Bool ---
+	PatternAddDouble      :: proc(p: ^Pattern, object: cstring, d: f64) -> Bool ---
+	PatternAddString      :: proc(p: ^Pattern, object: cstring, s: ^Char8) -> Bool ---
+	PatternAddMatrix      :: proc(p: ^Pattern, object: cstring, s: ^Matrix) -> Bool ---
+	PatternAddCharSet     :: proc(p: ^Pattern, object: cstring, _c: ^Char_Set) -> Bool ---
+	PatternAddBool        :: proc(p: ^Pattern, object: cstring, b: Bool) -> Bool ---
+	PatternAddLangSet     :: proc(p: ^Pattern, object: cstring, ls: ^Lang_Set) -> Bool ---
+	PatternAddRange       :: proc(p: ^Pattern, object: cstring, r: ^Range) -> Bool ---
+	PatternGetInteger     :: proc(p: ^Pattern, object: cstring, n: i32, i: ^i32) -> Result ---
+	PatternGetDouble      :: proc(p: ^Pattern, object: cstring, n: i32, d: ^f64) -> Result ---
+	PatternGetString      :: proc(p: ^Pattern, object: cstring, n: i32, s: ^^Char8) -> Result ---
+	PatternGetMatrix      :: proc(p: ^Pattern, object: cstring, n: i32, s: ^^Matrix) -> Result ---
+	PatternGetCharSet     :: proc(p: ^Pattern, object: cstring, n: i32, _c: ^^Char_Set) -> Result ---
+	PatternGetBool        :: proc(p: ^Pattern, object: cstring, n: i32, b: ^Bool) -> Result ---
+	PatternGetLangSet     :: proc(p: ^Pattern, object: cstring, n: i32, ls: ^^Lang_Set) -> Result ---
+	PatternGetRange       :: proc(p: ^Pattern, object: cstring, id: i32, r: ^^Range) -> Result ---
+	PatternVaBuild        :: proc(p: ^Pattern, va: i32) -> ^Pattern ---
+	PatternBuild          :: proc(p: ^Pattern, #c_vararg _: ..any) -> ^Pattern ---
+	PatternFormat         :: proc(pat: ^Pattern, format: ^Char8) -> ^Char8 ---
 
 	/* fcrange.c */
-	FcRangeCreateDouble     :: proc(begin: f64, end: f64) -> ^Fc_Range ---
-	FcRangeCreateInteger    :: proc(begin: Fc_Char32, end: Fc_Char32) -> ^Fc_Range ---
-	FcRangeDestroy          :: proc(range: ^Fc_Range) ---
-	FcRangeCopy             :: proc(r: ^Fc_Range) -> ^Fc_Range ---
-	FcRangeGetDouble        :: proc(range: ^Fc_Range, begin: ^f64, end: ^f64) -> Fc_Bool ---
-	FcPatternIterStart      :: proc(pat: ^Fc_Pattern, iter: ^Fc_Pattern_Iter) ---
-	FcPatternIterNext       :: proc(pat: ^Fc_Pattern, iter: ^Fc_Pattern_Iter) -> Fc_Bool ---
-	FcPatternIterEqual      :: proc(p1: ^Fc_Pattern, i1: ^Fc_Pattern_Iter, p2: ^Fc_Pattern, i2: ^Fc_Pattern_Iter) -> Fc_Bool ---
-	FcPatternFindIter       :: proc(pat: ^Fc_Pattern, iter: ^Fc_Pattern_Iter, object: cstring) -> Fc_Bool ---
-	FcPatternIterIsValid    :: proc(pat: ^Fc_Pattern, iter: ^Fc_Pattern_Iter) -> Fc_Bool ---
-	FcPatternIterGetObject  :: proc(pat: ^Fc_Pattern, iter: ^Fc_Pattern_Iter) -> cstring ---
-	FcPatternIterValueCount :: proc(pat: ^Fc_Pattern, iter: ^Fc_Pattern_Iter) -> i32 ---
-	FcPatternIterGetValue   :: proc(pat: ^Fc_Pattern, iter: ^Fc_Pattern_Iter, id: i32, v: ^Fc_Value, b: ^Fc_Value_Binding) -> Fc_Result ---
+	RangeCreateDouble     :: proc(begin: f64, end: f64) -> ^Range ---
+	RangeCreateInteger    :: proc(begin: Char32, end: Char32) -> ^Range ---
+	RangeDestroy          :: proc(range: ^Range) ---
+	RangeCopy             :: proc(r: ^Range) -> ^Range ---
+	RangeGetDouble        :: proc(range: ^Range, begin: ^f64, end: ^f64) -> Bool ---
+	PatternIterStart      :: proc(pat: ^Pattern, iter: ^Pattern_Iter) ---
+	PatternIterNext       :: proc(pat: ^Pattern, iter: ^Pattern_Iter) -> Bool ---
+	PatternIterEqual      :: proc(p1: ^Pattern, i1: ^Pattern_Iter, p2: ^Pattern, i2: ^Pattern_Iter) -> Bool ---
+	PatternFindIter       :: proc(pat: ^Pattern, iter: ^Pattern_Iter, object: cstring) -> Bool ---
+	PatternIterIsValid    :: proc(pat: ^Pattern, iter: ^Pattern_Iter) -> Bool ---
+	PatternIterGetObject  :: proc(pat: ^Pattern, iter: ^Pattern_Iter) -> cstring ---
+	PatternIterValueCount :: proc(pat: ^Pattern, iter: ^Pattern_Iter) -> i32 ---
+	PatternIterGetValue   :: proc(pat: ^Pattern, iter: ^Pattern_Iter, id: i32, v: ^Value, b: ^Value_Binding) -> Result ---
 
 	/* fcweight.c */
-	FcWeightFromOpenType       :: proc(ot_weight: i32) -> i32 ---
-	FcWeightFromOpenTypeDouble :: proc(ot_weight: f64) -> f64 ---
-	FcWeightToOpenType         :: proc(fc_weight: i32) -> i32 ---
-	FcWeightToOpenTypeDouble   :: proc(fc_weight: f64) -> f64 ---
+	WeightFromOpenType       :: proc(ot_weight: i32) -> i32 ---
+	WeightFromOpenTypeDouble :: proc(ot_weight: f64) -> f64 ---
+	WeightToOpenType         :: proc(fc_weight: i32) -> i32 ---
+	WeightToOpenTypeDouble   :: proc(fc_weight: f64) -> f64 ---
 
 	/* fcstr.c */
-	FcStrCopy          :: proc(s: ^Fc_Char8) -> ^Fc_Char8 ---
-	FcStrCopyFilename  :: proc(s: ^Fc_Char8) -> ^Fc_Char8 ---
-	FcStrPlus          :: proc(s1: ^Fc_Char8, s2: ^Fc_Char8) -> ^Fc_Char8 ---
-	FcStrFree          :: proc(s: ^Fc_Char8) ---
-	FcStrDowncase      :: proc(s: ^Fc_Char8) -> ^Fc_Char8 ---
-	FcStrCmpIgnoreCase :: proc(s1: ^Fc_Char8, s2: ^Fc_Char8) -> i32 ---
-	FcStrCmp           :: proc(s1: ^Fc_Char8, s2: ^Fc_Char8) -> i32 ---
-	FcStrStrIgnoreCase :: proc(s1: ^Fc_Char8, s2: ^Fc_Char8) -> ^Fc_Char8 ---
-	FcStrStr           :: proc(s1: ^Fc_Char8, s2: ^Fc_Char8) -> ^Fc_Char8 ---
-	FcUtf8ToUcs4       :: proc(src_orig: ^Fc_Char8, dst: ^Fc_Char32, len: i32) -> i32 ---
-	FcUtf8Len          :: proc(_string: ^Fc_Char8, len: i32, nchar: ^i32, wchar: ^i32) -> Fc_Bool ---
+	StrCopy          :: proc(s: ^Char8) -> ^Char8 ---
+	StrCopyFilename  :: proc(s: ^Char8) -> ^Char8 ---
+	StrPlus          :: proc(s1: ^Char8, s2: ^Char8) -> ^Char8 ---
+	StrFree          :: proc(s: ^Char8) ---
+	StrDowncase      :: proc(s: ^Char8) -> ^Char8 ---
+	StrCmpIgnoreCase :: proc(s1: ^Char8, s2: ^Char8) -> i32 ---
+	StrCmp           :: proc(s1: ^Char8, s2: ^Char8) -> i32 ---
+	StrStrIgnoreCase :: proc(s1: ^Char8, s2: ^Char8) -> ^Char8 ---
+	StrStr           :: proc(s1: ^Char8, s2: ^Char8) -> ^Char8 ---
+	Utf8ToUcs4       :: proc(src_orig: ^Char8, dst: ^Char32, len: i32) -> i32 ---
+	Utf8Len          :: proc(_string: ^Char8, len: i32, nchar: ^i32, wchar: ^i32) -> Bool ---
 }
 
-FC_UTF8_MAX_LEN :: 6
+UTF8_MAX_LEN :: 6
 
-@(default_calling_convention="c")
+@(default_calling_convention="c", link_prefix="Fc")
 foreign lib {
-	FcUcs4ToUtf8        :: proc(ucs4: Fc_Char32, dest: ^[6]Fc_Char8) -> i32 ---
-	FcUtf16ToUcs4       :: proc(src_orig: ^Fc_Char8, endian: Fc_Endian, dst: ^Fc_Char32, len: i32) -> i32 ---
-	FcUtf16Len          :: proc(_string: ^Fc_Char8, endian: Fc_Endian, len: i32, nchar: ^i32, wchar: ^i32) -> Fc_Bool ---
-	FcStrBuildFilename  :: proc(path: ^Fc_Char8, #c_vararg _: ..any) -> ^Fc_Char8 ---
-	FcStrDirname        :: proc(file: ^Fc_Char8) -> ^Fc_Char8 ---
-	FcStrBasename       :: proc(file: ^Fc_Char8) -> ^Fc_Char8 ---
-	FcStrSetCreate      :: proc() -> ^Fc_Str_Set ---
-	FcStrSetMember      :: proc(set: ^Fc_Str_Set, s: ^Fc_Char8) -> Fc_Bool ---
-	FcStrSetEqual       :: proc(sa: ^Fc_Str_Set, sb: ^Fc_Str_Set) -> Fc_Bool ---
-	FcStrSetAdd         :: proc(set: ^Fc_Str_Set, s: ^Fc_Char8) -> Fc_Bool ---
-	FcStrSetAddFilename :: proc(set: ^Fc_Str_Set, s: ^Fc_Char8) -> Fc_Bool ---
-	FcStrSetDel         :: proc(set: ^Fc_Str_Set, s: ^Fc_Char8) -> Fc_Bool ---
-	FcStrSetDestroy     :: proc(set: ^Fc_Str_Set) ---
-	FcStrListCreate     :: proc(set: ^Fc_Str_Set) -> ^Fc_Str_List ---
-	FcStrListFirst      :: proc(list: ^Fc_Str_List) ---
-	FcStrListNext       :: proc(list: ^Fc_Str_List) -> ^Fc_Char8 ---
-	FcStrListDone       :: proc(list: ^Fc_Str_List) ---
+	Ucs4ToUtf8        :: proc(ucs4: Char32, dest: ^[6]Char8) -> i32 ---
+	Utf16ToUcs4       :: proc(src_orig: ^Char8, endian: Endian, dst: ^Char32, len: i32) -> i32 ---
+	Utf16Len          :: proc(_string: ^Char8, endian: Endian, len: i32, nchar: ^i32, wchar: ^i32) -> Bool ---
+	StrBuildFilename  :: proc(path: ^Char8, #c_vararg _: ..any) -> ^Char8 ---
+	StrDirname        :: proc(file: ^Char8) -> ^Char8 ---
+	StrBasename       :: proc(file: ^Char8) -> ^Char8 ---
+	StrSetCreate      :: proc() -> ^Str_Set ---
+	StrSetMember      :: proc(set: ^Str_Set, s: ^Char8) -> Bool ---
+	StrSetEqual       :: proc(sa: ^Str_Set, sb: ^Str_Set) -> Bool ---
+	StrSetAdd         :: proc(set: ^Str_Set, s: ^Char8) -> Bool ---
+	StrSetAddFilename :: proc(set: ^Str_Set, s: ^Char8) -> Bool ---
+	StrSetDel         :: proc(set: ^Str_Set, s: ^Char8) -> Bool ---
+	StrSetDestroy     :: proc(set: ^Str_Set) ---
+	StrListCreate     :: proc(set: ^Str_Set) -> ^Str_List ---
+	StrListFirst      :: proc(list: ^Str_List) ---
+	StrListNext       :: proc(list: ^Str_List) -> ^Char8 ---
+	StrListDone       :: proc(list: ^Str_List) ---
 
 	/* fcxml.c */
-	FcConfigParseAndLoad           :: proc(config: ^Fc_Config, file: ^Fc_Char8, complain: Fc_Bool) -> Fc_Bool ---
-	FcConfigParseAndLoadFromMemory :: proc(config: ^Fc_Config, buffer: ^Fc_Char8, complain: Fc_Bool) -> Fc_Bool ---
+	ConfigParseAndLoad           :: proc(config: ^Config, file: ^Char8, complain: Bool) -> Bool ---
+	ConfigParseAndLoadFromMemory :: proc(config: ^Config, buffer: ^Char8, complain: Bool) -> Bool ---
 }
 
