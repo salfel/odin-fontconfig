@@ -1,0 +1,19 @@
+inputs = [
+	"input"
+]
+
+output_folder = "."
+
+force_ada_case_types = true
+
+import_lib = "libfontconfig.lib"
+
+package_name = "fontconfig"
+
+clang_include_paths = [
+    "input/freetype",
+    "input/freetype/freetype",
+    "input/freetype/config",
+    "input/freetype/internal",
+    "input/freetype/internal/services"
+]

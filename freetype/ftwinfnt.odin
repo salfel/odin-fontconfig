@@ -1,0 +1,171 @@
+/****************************************************************************
+ *
+ * ftwinfnt.h
+ *
+ *   FreeType API for accessing Windows fnt-specific data.
+ *
+ * Copyright (C) 2003-2025 by
+ * David Turner, Robert Wilhelm, and Werner Lemberg.
+ *
+ * This file is part of the FreeType project, and may only be used,
+ * modified, and distributed under the terms of the FreeType project
+ * license, LICENSE.TXT.  By continuing to use, modify, or distribute
+ * this file you indicate that you have read the license and
+ * understand and accept it fully.
+ *
+ */
+package freetype
+
+foreign import lib "freetype.lib"
+_ :: lib
+
+/**************************************************************************
+*
+* @section:
+*   winfnt_fonts
+*
+* @title:
+*   Window FNT Files
+*
+* @abstract:
+*   Windows FNT-specific API.
+*
+* @description:
+*   This section contains the declaration of Windows FNT-specific
+*   functions.
+*
+*/
+
+
+/**************************************************************************
+*
+* @enum:
+*   FT_WinFNT_ID_XXX
+*
+* @description:
+*   A list of valid values for the `charset` byte in @FT_WinFNT_HeaderRec.
+*   Exact mapping tables for the various 'cpXXXX' encodings (except for
+*   'cp1361') can be found at 'ftp://ftp.unicode.org/Public/' in the
+*   `MAPPINGS/VENDORS/MICSFT/WINDOWS` subdirectory.  'cp1361' is roughly a
+*   superset of `MAPPINGS/OBSOLETE/EASTASIA/KSC/JOHAB.TXT`.
+*
+* @values:
+*   FT_WinFNT_ID_DEFAULT ::
+*     This is used for font enumeration and font creation as a 'don't
+*     care' value.  Valid font files don't contain this value.  When
+*     querying for information about the character set of the font that is
+*     currently selected into a specified device context, this return
+*     value (of the related Windows API) simply denotes failure.
+*
+*   FT_WinFNT_ID_SYMBOL ::
+*     There is no known mapping table available.
+*
+*   FT_WinFNT_ID_MAC ::
+*     Mac Roman encoding.
+*
+*   FT_WinFNT_ID_OEM ::
+*     From Michael Poettgen <michael@poettgen.de>:
+*
+*     The 'Windows Font Mapping' article says that `FT_WinFNT_ID_OEM` is
+*     used for the charset of vector fonts, like `modern.fon`,
+*     `roman.fon`, and `script.fon` on Windows.
+*
+*     The 'CreateFont' documentation says: The `FT_WinFNT_ID_OEM` value
+*     specifies a character set that is operating-system dependent.
+*
+*     The 'IFIMETRICS' documentation from the 'Windows Driver Development
+*     Kit' says: This font supports an OEM-specific character set.  The
+*     OEM character set is system dependent.
+*
+*     In general OEM, as opposed to ANSI (i.e., 'cp1252'), denotes the
+*     second default codepage that most international versions of Windows
+*     have.  It is one of the OEM codepages from
+*
+*     https://learn.microsoft.com/windows/win32/intl/code-page-identifiers ,
+*
+*     and is used for the 'DOS boxes', to support legacy applications.  A
+*     German Windows version for example usually uses ANSI codepage 1252
+*     and OEM codepage 850.
+*
+*   FT_WinFNT_ID_CP874 ::
+*     A superset of Thai TIS 620 and ISO 8859-11.
+*
+*   FT_WinFNT_ID_CP932 ::
+*     A superset of Japanese Shift-JIS (with minor deviations).
+*
+*   FT_WinFNT_ID_CP936 ::
+*     A superset of simplified Chinese GB 2312-1980 (with different
+*     ordering and minor deviations).
+*
+*   FT_WinFNT_ID_CP949 ::
+*     A superset of Korean Hangul KS~C 5601-1987 (with different ordering
+*     and minor deviations).
+*
+*   FT_WinFNT_ID_CP950 ::
+*     A superset of traditional Chinese Big~5 ETen (with different
+*     ordering and minor deviations).
+*
+*   FT_WinFNT_ID_CP1250 ::
+*     A superset of East European ISO 8859-2 (with slightly different
+*     ordering).
+*
+*   FT_WinFNT_ID_CP1251 ::
+*     A superset of Russian ISO 8859-5 (with different ordering).
+*
+*   FT_WinFNT_ID_CP1252 ::
+*     ANSI encoding.  A superset of ISO 8859-1.
+*
+*   FT_WinFNT_ID_CP1253 ::
+*     A superset of Greek ISO 8859-7 (with minor modifications).
+*
+*   FT_WinFNT_ID_CP1254 ::
+*     A superset of Turkish ISO 8859-9.
+*
+*   FT_WinFNT_ID_CP1255 ::
+*     A superset of Hebrew ISO 8859-8 (with some modifications).
+*
+*   FT_WinFNT_ID_CP1256 ::
+*     A superset of Arabic ISO 8859-6 (with different ordering).
+*
+*   FT_WinFNT_ID_CP1257 ::
+*     A superset of Baltic ISO 8859-13 (with some deviations).
+*
+*   FT_WinFNT_ID_CP1258 ::
+*     For Vietnamese.  This encoding doesn't cover all necessary
+*     characters.
+*
+*   FT_WinFNT_ID_CP1361 ::
+*     Korean (Johab).
+*/
+FT_WinFNT_ID_CP1252    :: 0
+FT_WinFNT_ID_DEFAULT   :: 1
+FT_WinFNT_ID_SYMBOL    :: 2
+FT_WinFNT_ID_MAC      :: 77
+FT_WinFNT_ID_CP932   :: 128
+FT_WinFNT_ID_CP949   :: 129
+FT_WinFNT_ID_CP1361  :: 130
+FT_WinFNT_ID_CP936   :: 134
+FT_WinFNT_ID_CP950   :: 136
+FT_WinFNT_ID_CP1253  :: 161
+FT_WinFNT_ID_CP1254  :: 162
+FT_WinFNT_ID_CP1258  :: 163
+FT_WinFNT_ID_CP1255  :: 177
+FT_WinFNT_ID_CP1256  :: 178
+FT_WinFNT_ID_CP1257  :: 186
+FT_WinFNT_ID_CP1251  :: 204
+FT_WinFNT_ID_CP874   :: 222
+FT_WinFNT_ID_CP1250  :: 238
+FT_WinFNT_ID_OEM     :: 255
+
+Ft_Win_Fnt_Header_Rec :: i32
+
+/**************************************************************************
+*
+* @struct:
+*   FT_WinFNT_Header
+*
+* @description:
+*   A handle to an @FT_WinFNT_HeaderRec structure.
+*/
+Ft_Win_Fnt_Header :: ^Ft_Win_Fnt_Header_Rec
+

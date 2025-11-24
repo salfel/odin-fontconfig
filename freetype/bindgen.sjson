@@ -1,0 +1,11 @@
+inputs = [
+    "input/freetype",
+]
+
+output_folder = "."
+
+force_ada_case_types = true
+
+import_lib = "freetype.lib"
+
+package_name = "freetype"
