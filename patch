@@ -1,0 +1,40 @@
+diff --git a/fontconfig.odin b/fontconfig.odin
+index 6eaa763..66c397d 100644
+--- a/fontconfig.odin
++++ b/fontconfig.odin
+@@ -23,6 +23,8 @@
+  */
+ package fontconfig
+ 
++import "core:os"
++
+ foreign import lib "libfontconfig.lib"
+ _ :: lib
+ 
+@@ -39,7 +41,7 @@ Bool   :: i32
+ MAJOR                :: 2
+ MINOR                :: 17
+ REVISION             :: 1
+-VERSION              :: ((FC_MAJOR*10000)+(FC_MINOR*100)+(FC_REVISION))
++VERSION              :: ((MAJOR*10000)+(MINOR*100)+(REVISION))
+ 
+ /*
+ * Current font cache file format version
+@@ -419,7 +421,7 @@ foreign lib {
+ }
+ 
+ CHARSET_MAP_SIZE :: (256/32)
+-CHARSET_DONE     :: ((FcChar32)-1)
++CHARSET_DONE     :: 4294967295 // ((FcChar32)-1)
+ 
+ @(default_calling_convention="c", link_prefix="Fc")
+ foreign lib {
+@@ -450,7 +452,7 @@ foreign lib {
+ 	DirCacheLoad     :: proc(dir: ^Char8, config: ^Config, cache_file: ^^Char8) -> ^Cache ---
+ 	DirCacheRescan   :: proc(dir: ^Char8, config: ^Config) -> ^Cache ---
+ 	DirCacheRead     :: proc(dir: ^Char8, force: Bool, config: ^Config) -> ^Cache ---
+-	DirCacheLoadFile :: proc(cache_file: ^Char8, file_stat: ^Stat) -> ^Cache ---
++	DirCacheLoadFile :: proc(cache_file: ^Char8, file_stat: ^os.OS_Stat) -> ^Cache ---
+ 	DirCacheUnload   :: proc(cache: ^Cache) ---
+ 
+ 	/* fcfreetype.c */
