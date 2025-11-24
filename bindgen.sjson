@@ -6,7 +6,7 @@ output_folder = "."
 
 force_ada_case_types = true
 
-import_lib = "libfontconfig.lib"
+import_lib = "system:fontconfig"
 
 package_name = "fontconfig"
 

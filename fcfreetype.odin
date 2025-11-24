@@ -23,7 +23,7 @@
  */
 package fontconfig
 
-foreign import lib "libfontconfig.lib"
+foreign import lib "system:fontconfig"
 _ :: lib
 
 @(default_calling_convention="c", link_prefix="Fc")

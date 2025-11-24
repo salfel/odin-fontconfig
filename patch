@@ -8,7 +8,7 @@ index 6eaa763..66c397d 100644
  
 +import "core:os"
 +
- foreign import lib "libfontconfig.lib"
+ foreign import lib "system:fontconfig"
  _ :: lib
  
 @@ -39,7 +41,7 @@ Bool   :: i32

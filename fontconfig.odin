@@ -25,7 +25,7 @@ package fontconfig
 
 import "core:os"
 
-foreign import lib "libfontconfig.lib"
+foreign import lib "system:fontconfig"
 _ :: lib
 
 Char8  :: u8
